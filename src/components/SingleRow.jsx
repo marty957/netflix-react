@@ -31,7 +31,7 @@ class SingleRow extends Component {
 
     return (
       <>
-        <h2>{this.props.title}</h2>
+        <h2 className="my-3 fs-1">{this.props.title}</h2>
         {this.state.isLoading && (
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
@@ -40,7 +40,7 @@ class SingleRow extends Component {
         <Row>
           {movies.slice(0, 6).map((movie) => (
             <Col sm={12} md={4} lg={2} key={movie.idmbId} className="mb-2 text-center px-1">
-              <Image src={movie.Poster} alt="poster" className="img" />
+              <Image src={movie.Poster} alt="poster" className="img-fluid" />
             </Col>
           ))}
         </Row>

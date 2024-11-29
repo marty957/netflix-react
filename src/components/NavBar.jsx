@@ -8,7 +8,7 @@ import "../App.css";
 
 const NavBar = () => {
   return (
-    <Navbar expand="lg" className="bg-dark" data-bs-theme="dark">
+    <Navbar expand="lg" className="bg-dark" data-bs-theme="dark" fluid>
       <Navbar.Brand href="#home">
         <Image src="../src/assets/logo.png" width={150} height={65} />
       </Navbar.Brand>
@@ -43,16 +43,16 @@ const NavBar = () => {
         </Nav>
 
         <Nav className="aling-items-center">
-          <Nav.Item className="me-2">
-            <Search className="bi bi-search icons" />
+          <Nav.Item className="m-auto">
+            <Search className="icons" />
           </Nav.Item>
-          <Nav.Item className="mx-2">
+          <Nav.Item className="m-auto">
             <Nav.Link className="fs-5 fw-bold active">KIDS</Nav.Link>
           </Nav.Item>
-          <Nav.Item className="mx-2">
+          <Nav.Item className="m-auto">
             <Bell className="bi bi-search icons" />
           </Nav.Item>
-          <Nav.Item className="mx-2">
+          <Nav.Item className="m-auto">
             <PersonCircle className="bi bi-search icons" />
           </Nav.Item>
         </Nav>
