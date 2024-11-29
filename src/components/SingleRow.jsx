@@ -1,9 +1,10 @@
 import { Component } from "react";
-import { Col, Row, Image } from "react-bootstrap";
+import { Col, Row, Image, Spinner } from "react-bootstrap";
 
 class SingleRow extends Component {
   state = {
-    movies: []
+    movies: [],
+    isLoading: false
   };
 
   fetchMovies = () => {
@@ -17,6 +18,7 @@ class SingleRow extends Component {
         this.setState({ movies: movies.Search });
       })
       .catch((err) => {
+        this.setState({ isLoading: true });
         console.log(err);
       });
   };
@@ -30,6 +32,11 @@ class SingleRow extends Component {
     return (
       <>
         <h2>{this.props.title}</h2>
+        {this.state.isLoading && (
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        )}
         <Row>
           {movies.slice(0, 6).map((movie) => (
             <Col sm={12} md={4} lg={2} key={movie.idmbId} className="mb-2 text-center px-1">
