@@ -40,7 +40,7 @@ class SingleRow extends Component {
         <Row>
           {movies.slice(0, 6).map((movie) => (
             <Col sm={12} md={4} lg={2} key={movie.idmbId} className="mb-2 text-center px-1">
-              <Image src={movie.Poster} alt="poster" className="img-fluid" />
+              <Image src={movie.Poster} alt="poster" className="img" />
             </Col>
           ))}
         </Row>
